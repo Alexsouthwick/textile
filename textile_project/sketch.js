@@ -9,13 +9,23 @@ var y_value_t= square_placement-square_length-50;
 
 //creates canvas, addsbackground color, moves to center of canvas
 function setup() {
-  createCanvas(2000,2000);
+  createCanvas(2500,2500);
   background(186,252,5);
   translate(width/2, height/2);
   frameRate(8);
 }
 
-//function to draw the one side of lines
+//function to draw the three other blocks next to the original block
+function three_blocks(){
+  translate(-1250, -2750);
+  draw_full();
+  translate(-150, -1650);
+  draw_full();
+  translate(-1250,-550);
+  draw_full();
+}
+
+//function to draw the one side of lines on square
 function line_pattern() {
   for (i=1; i<13; i++){
    var x_placement= i*20;
@@ -80,7 +90,7 @@ function lines_right(x_value){
 function square_lines_left(){
   for (i=1; i<10; i++){
     var x_point= i*10;
-    strokeWeight(random(.3, 1));
+    strokeWeight(1);
     stroke("blue");
     line(100,100,square_length-x_point ,0);
 
@@ -92,14 +102,13 @@ function square_lines_right(){
   for (i=1; i<10; i++){
     var x_point= i*5;150
     var green= color(30,250,48);
-    strokeWeight(random(.3,1));
+    strokeWeight(1);
     stroke(green);
     line(0,0, square_length-x_point, 100);
   }
 }
-
-//draws blocks at 8 frames per second (look at setup function)
-function draw() {
+//function to draw entire block with white background rectangle
+function draw_full(){
   translate(width/2, height/2);
   stroke("blue");
   strokeWeight(3);
@@ -116,4 +125,12 @@ function draw() {
   pop();
   fill("blue");
   ellipse(-150, -150, 5,5);
+}
+
+//draws original block at 8 frames per second (look at setup function)
+function draw() {
+  translate(-400,300);
+  draw_full();
+  three_blocks();
+
     }
