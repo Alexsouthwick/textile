@@ -1,3 +1,10 @@
+/* Psychedelic Textile
+Designed and Programmed by: Alex Southwick
+10/4/16
+
+My textile is inspired by the psychedelic art of the 60's and the counterculture movement. I was inspired mostly by David Rubin's book Psychedelic: Optical and Visionary Art Since the 1960s. All code used to make my textile was programmed by me.
+*/
+
 var square_length= 100;
 var square_placement= 0;
 var x_value_lm= square_placement-square_length;
@@ -9,20 +16,10 @@ var y_value_t= square_placement-square_length-50;
 
 //creates canvas, addsbackground color, moves to center of canvas
 function setup() {
-  createCanvas(2500,2500);
+  createCanvas(1000,1000);
   background(186,252,5);
   translate(width/2, height/2);
   frameRate(8);
-}
-
-//function to draw the three other blocks next to the original block
-function three_blocks(){
-  translate(-1250, -2750);
-  draw_full();
-  translate(-150, -1650);
-  draw_full();
-  translate(-1250,-550);
-  draw_full();
 }
 
 //function to draw the one side of lines on square
@@ -40,7 +37,7 @@ function line_pattern() {
 }
 //function to draw whole block including rectangle and lines
 function draw_block(){
-  push();
+    push();
     strokeWeight(3);
     stroke(30,250,48);
     fill(255);
@@ -52,7 +49,7 @@ function draw_block(){
     line(x_value_lm,y_value_m,x_value_lt,y_value_t);
 
     //right lines on one side
-    line(square_placement+square_length,square_placement,x_value_rm, y_value_m);
+    line(square_placement+square_length,squaer_placement,x_value_rm, y_value_m);
     line(x_value_rm, y_value_m, x_value_rt, y_value_t);
 
     //rotating lines around square to all sides
@@ -129,8 +126,6 @@ function draw_full(){
 
 //draws original block at 8 frames per second (look at setup function)
 function draw() {
-  translate(-400,300);
+  translate(150,-250);
   draw_full();
-  three_blocks();
-
     }
