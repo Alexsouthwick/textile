@@ -2,7 +2,11 @@
 Designed and Programmed by: Alex Southwick
 10/4/16
 
-My textile is inspired by the psychedelic art of the 60's and the counterculture movement. I was inspired mostly by David Rubin's book Psychedelic: Optical and Visionary Art Since the 1960s. All code used to make my textile was programmed by me.
+Description: My textile is inspired by the psychedelic art of the 60's and the counterculture movement. I wanted to use the bright colors and repetition to make something similar to the psychedelic posters that were around in San Francisco during this movement. My goal was to make it as "trippy" as possible to reference the goal of psychedelic art which was to mimic the effects of LSD.
+
+Sources:I was inspired mostly by David Rubin's book Psychedelic: Optical and Visionary Art Since the 1960s. 
+
+All code used to make my textile was programmed by me and all ideas came from me with no outside code or help. 
 */
 
 var square_length= 100;
@@ -14,7 +18,7 @@ var x_value_rt= square_placement+square_length-20;
 var y_value_m= square_placement-70;
 var y_value_t= square_placement-square_length-50;
 
-//creates canvas, addsbackground color, moves to center of canvas
+//creates canvas, adds background color, moves to center of canvas
 function setup() {
   createCanvas(1000,1000);
   background(186,252,5);
