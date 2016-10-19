@@ -53,7 +53,7 @@ function draw_block(){
     line(x_value_lm,y_value_m,x_value_lt,y_value_t);
 
     //right lines on one side
-    line(square_placement+square_length,squaer_placement,x_value_rm, y_value_m);
+    line(square_placement+square_length,square_placement,x_value_rm, y_value_m);
     line(x_value_rm, y_value_m, x_value_rt, y_value_t);
 
     //rotating lines around square to all sides
